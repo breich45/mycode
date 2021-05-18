@@ -1,4 +1,8 @@
 #!/usr/bin/python3
 quest = input("What is your quest?")
 
-print(quest)
+def main():
+    print(quest)
+
+
+main()
