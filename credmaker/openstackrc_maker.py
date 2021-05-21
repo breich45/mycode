@@ -1,22 +1,33 @@
 #!/usr/bin/env python3
-with open("admin.rc", "a") as outFile:
-	osAUTH = input("What is the OS_AUTH_URL?")
-	print("export OS_AUTH_URL=" + osAUTH, file=outFile)
 
-	print("export OS_IDENTITY_API_VERSION=3", file=outFile)
+"""
+Author: Average Joe
+This script does a thing
+"""
 
-	osPROJ = input("What is the OS_PROJECT_NAME?")
-	print("export OS_PROJECT_NAME=" + osPROJ, file=outFile)
+def main():
+    """ because i need a doc string here """
+    with open("admin.rc", "a") as outFile:
+        myAUTH = input("What is the OS_AUTH_URL?") # get input from user
+        print("export OS_AUTH_URL=" + myAUTH, file=outFile) # put in file
 
-	osPROJDOM = input("What is the OS_PROJECT_DOMAIN_NAME?")
-	print("export OS_PROJECT_DOMAIN_NAME=" + osPROJDOM, file=outFile)
+        print("export OS_IDENTITY_API_VERSION=3", file=outFile) # put more stuff in the file
 
-	osUSER = input("What is the OS_USERNAME?")
-	print("export OS_USERNAME=" + osUSER, file=outFile)
+        myPROJ = input("What is the OS_PROJECT_NAME?") # get more stuff from user
+        print("export OS_PROJECT_NAME=" + myPROJ, file=outFile) #put more stuff in file
 
-	osUSERDOM = input("What is the OS_USER_DOMAIN_NAME?")
-	print("export OS_USER_DOMAIN_NAME=" + osUSERDOM, file=outFile)
+        osPROJDOM = input("What is the OS_PROJECT_DOMAIN_NAME?") # ditto
+        print("export OS_PROJECT_DOMAIN_NAME=" + osPROJDOM, file=outFile) # more ditto
 
-	osPASS = input("What is the OS_PASSWORD?")
-	print("export OS_PASSWORD=" + osPASS, file=outFile)
+        osUSER = input("What is the OS_USERNAME?") # yup, again
+        print("export OS_USERNAME=" + osUSER, file=outFile) # x2
+
+        osUSERDOM = input("What is the OS_USER_DOMAIN_NAME?") # more input. when does it end?
+        print("export OS_USER_DOMAIN_NAME=" + osUSERDOM, file=outFile) # how big is this file anyways
+
+        osPASS = input("What is the OS_PASSWORD?") # last one mebbe?
+        print("export OS_PASSWORD=" + osPASS, file=outFile) # dump it with the rest
+
+if __name__ == "__main__":
+    main()
 
